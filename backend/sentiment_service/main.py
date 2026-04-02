@@ -60,7 +60,7 @@ async def lifespan(app: FastAPI):
     logger.info("Sentiment service stopped.")
 
 
-app = FastAPI(title="SentimentPulse Sentiment Service", lifespan=lifespan)
+app = FastAPI(title="Wavely Sentiment Service", lifespan=lifespan)
 
 app.add_middleware(
     CORSMiddleware,

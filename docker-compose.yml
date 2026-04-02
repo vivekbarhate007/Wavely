@@ -1,12 +1,12 @@
 version: "3.9"
 
 # ──────────────────────────────────────────────────────────────────────────────
-# SentimentPulse — one-command stack
+# Wavely — one-command stack
 # Usage: docker compose up --build
 # ──────────────────────────────────────────────────────────────────────────────
 
 x-common-env: &common-env
-  DATABASE_URL: postgresql+asyncpg://${POSTGRES_USER:-pulse}:${POSTGRES_PASSWORD:-pulse_secret}@postgres:5432/${POSTGRES_DB:-sentimentpulse}
+  DATABASE_URL: postgresql+asyncpg://${POSTGRES_USER:-pulse}:${POSTGRES_PASSWORD:-pulse_secret}@postgres:5432/${POSTGRES_DB:-wavely}
   KAFKA_BOOTSTRAP_SERVERS: kafka:29092
   GROQ_API_KEY: ${GROQ_API_KEY}
   GROQ_MODEL: ${GROQ_MODEL:-llama-3.3-70b-versatile}
@@ -19,14 +19,14 @@ services:
     environment:
       POSTGRES_USER: ${POSTGRES_USER:-pulse}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-pulse_secret}
-      POSTGRES_DB: ${POSTGRES_DB:-sentimentpulse}
+      POSTGRES_DB: ${POSTGRES_DB:-wavely}
     ports:
       - "5432:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
       - ./infra/init.sql:/docker-entrypoint-initdb.d/init.sql:ro
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-pulse} -d ${POSTGRES_DB:-sentimentpulse}"]
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-pulse} -d ${POSTGRES_DB:-wavely}"]
       interval: 5s
       timeout: 5s
       retries: 10

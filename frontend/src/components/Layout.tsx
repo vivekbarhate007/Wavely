@@ -32,7 +32,7 @@ export default function Layout({ children }: { children: ReactNode }) {
               </svg>
             </div>
             <span className="text-sm font-bold text-gray-900 tracking-tight">
-              Sentiment<span className="text-orange-500">Pulse</span>
+              Wave<span className="text-orange-500">ly</span>
             </span>
           </div>
 
@@ -78,7 +78,7 @@ export default function Layout({ children }: { children: ReactNode }) {
               Backend not connected — showing sample data.
             </span>
             <span className="text-xs text-amber-600">
-              Run <code className="bg-amber-100 border border-amber-300 px-1.5 py-0.5 rounded font-mono">docker compose up -d</code> inside <code className="bg-amber-100 border border-amber-300 px-1.5 py-0.5 rounded font-mono">SentimentPulse/</code> then add your API keys to <code className="bg-amber-100 border border-amber-300 px-1.5 py-0.5 rounded font-mono">.env</code>
+              Run <code className="bg-amber-100 border border-amber-300 px-1.5 py-0.5 rounded font-mono">docker compose up -d</code> inside <code className="bg-amber-100 border border-amber-300 px-1.5 py-0.5 rounded font-mono">Wavely/</code> then add your API keys to <code className="bg-amber-100 border border-amber-300 px-1.5 py-0.5 rounded font-mono">.env</code>
             </span>
           </div>
         )}

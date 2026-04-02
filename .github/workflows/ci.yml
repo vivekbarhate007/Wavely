@@ -47,7 +47,7 @@ jobs:
       - name: Run tests
         run: pytest tests/ -v --tb=short
         env:
-          DATABASE_URL: postgresql+asyncpg://pulse:pulse_secret@localhost:5432/sentimentpulse
+          DATABASE_URL: postgresql+asyncpg://pulse:pulse_secret@localhost:5432/wavely
           GROQ_API_KEY: test_key
           KAFKA_BOOTSTRAP_SERVERS: localhost:9092
 

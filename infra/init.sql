@@ -1,4 +1,4 @@
--- SentimentPulse — Database Initialization
+-- Wavely — Database Initialization
 CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
 
 CREATE SCHEMA IF NOT EXISTS sentiment;

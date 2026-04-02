@@ -1,4 +1,4 @@
-# SentimentPulse
+# Wavely
 
 A real-time AI-powered sentiment analysis dashboard for Hacker News. Posts are scraped every 5 minutes, analyzed by a LangGraph agent using Groq's free LLM API, and displayed on a live React dashboard with trend alerts and weekly digests.
 
@@ -100,7 +100,7 @@ Hacker News API
 ## Project Structure
 
 ```
-SentimentPulse/
+Wavely/
 ├── agents/
 │   ├── sentiment_agent.py      # LangGraph agent (core AI logic)
 │   └── requirements.txt
@@ -306,8 +306,8 @@ pip install -r backend/sentiment_service/requirements.txt   # fastapi, uvicorn, 
 
 # 2. Create the database and schema
 psql -U postgres -c "CREATE USER pulse WITH PASSWORD 'pulse_secret';"
-psql -U postgres -c "CREATE DATABASE sentimentpulse OWNER pulse;"
-psql -h localhost -U pulse -d sentimentpulse -f infra/init.sql
+psql -U postgres -c "CREATE DATABASE wavely OWNER pulse;"
+psql -h localhost -U pulse -d wavely -f infra/init.sql
 
 # 3. Set environment variables
 cp .env.example .env

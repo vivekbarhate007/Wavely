@@ -1,5 +1,5 @@
 """
-SentimentPulse — Sentiment Agent
+Wavely — Sentiment Agent
 ==================================
 A LangGraph-based autonomous agent that:
   1. Consumes raw Reddit posts from Kafka topic `sentiment.raw.posts`

@@ -1,5 +1,5 @@
 """
-Seed the local SentimentPulse database with realistic sample data.
+Seed the local Wavely database with realistic sample data.
 Run: python scripts/seed_db.py
 """
 import asyncio, os, uuid
@@ -9,7 +9,7 @@ from sqlalchemy import text
 
 DATABASE_URL = os.environ.get(
     "DATABASE_URL",
-    "postgresql+asyncpg://pulse:pulse_secret@localhost:5432/sentimentpulse"
+    "postgresql+asyncpg://pulse:pulse_secret@localhost:5432/wavely"
 )
 
 engine = create_async_engine(DATABASE_URL, echo=False)

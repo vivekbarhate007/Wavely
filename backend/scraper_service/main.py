@@ -94,7 +94,7 @@ async def lifespan(app: FastAPI):
     logger.info("Scraper service stopped.")
 
 
-app = FastAPI(title="SentimentPulse Scraper Service", lifespan=lifespan)
+app = FastAPI(title="Wavely Scraper Service", lifespan=lifespan)
 
 app.add_middleware(
     CORSMiddleware,
