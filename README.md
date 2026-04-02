@@ -4,6 +4,22 @@ A real-time AI-powered sentiment analysis dashboard for Hacker News. Posts are s
 
 ---
 
+## Screenshots
+
+| Overview | Posts Feed |
+|----------|-----------|
+| ![Overview](docs/screenshots/overview.png) | ![Posts](docs/screenshots/posts.png) |
+
+| Topics | Trend Alerts |
+|--------|-------------|
+| ![Topics](docs/screenshots/topics.png) | ![Alerts](docs/screenshots/alerts.png) |
+
+**Weekly Digest**
+
+![Digest](docs/screenshots/digest.png)
+
+---
+
 ## Architecture Overview
 
 ```
